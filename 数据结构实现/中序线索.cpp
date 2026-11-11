@@ -33,6 +33,7 @@ void InThread(ThreadTree p, ThreadNode *&pre)
 
     if (p->lchild == nullptr)
     { // 当前孩子的左孩子为空，可以设置指向前驱
+      // 包含了第一个节点的前驱为空的情况，ltag仍然为1
         p->lchild = pre;
         p->ltag = 1;
     }
